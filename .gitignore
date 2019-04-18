@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/CrmLeadImport/v15
+/CrmLeadImport/bin/Debug
+/CrmLeadImport/obj/Debug
