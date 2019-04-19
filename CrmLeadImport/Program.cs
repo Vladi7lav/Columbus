@@ -13,48 +13,43 @@ using Microsoft.Xrm.Sdk;
 using System.Data;
 using System.IO;
 using System.Globalization;
+using Microsoft.Xrm.Sdk.Query;
+using CrmLeadImport;
+using CrmLeadImport.leadsExcel;
 
 namespace LeadImport
 {
     class Program
     {
-        
+
 
         static void Main(string[] args)
         {
-            StreamReader sr = new StreamReader("Lead.csv");
-            //var test = File.OpenRead("Lead.csv");
-            DataTable leads = sr;
-            //Excel leads = File.ReadAllLines("C:\Users\TSIV\source\repos\CrmLeadImport\CrmLeadImport\Lead.csv");
-            IOrganizationService p = GetOrganization();
-            foreach (DataRow rows in leads.Rows)
+            var pathTest = @"C:\Users\TSIV\Documents\Visual Studio 2017\Projects\sample_Dynamic_CRM\CrmLeadImport\leadsExcel\Leads.csv";
+
+            if (File.Exists(pathTest))
             {
-                Entity lead = new Entity("lead");
-                lead.Attributes["subject"] = rows["Topic"];
-                lead.Attributes["firstname"] = rows["First Name"];
-                lead.Attributes["lastname"] = rows["Last Name"];
-                lead.Attributes["companyname"] = rows["Company Name"];
-                lead.Attributes["numberofemployees"] = (int)rows["Number of Employees"];
-                lead.Attributes["revenue"] = decimal.Parse(rows["Annual Revenue"].ToString(), NumberStyles.Currency);
-                Guid g2 = p.Create(lead);
-                Console.WriteLine("Создан интерес для {0} {1}", rows["First Name"], rows["Last Name"]);
+
+
+                var credentials = new ClientCredentials
+                {
+                    Windows = { ClientCredential = new NetworkCredential("Administrator", "Pass@word99") }
+                };
+
+                Uri serviceUri = new Uri("http://crm-train.columbus.ru:5555/CRM2016/XRMServices/2011/Organization.svc");
+                
+                 FileStream path = new FileStream(pathTest, FileMode.Open, FileAccess.Read);
+                 List<Export> test = Export.ReadFile(path);
+                
+
+                CrmServiceWrapper a = new CrmServiceWrapper(serviceUri, credentials);
+                List<Guid> rGuid = a.ImportLeads(test);
+                Console.WriteLine(rGuid.Count);
+                Console.Read();
             }
-
+            else
+            { Console.WriteLine("Error path"); }
         }
-
-        private static IOrganizationService GetOrganization()
-        {
-            Uri organizationUri = new Uri("http://crm-train.columbus.ru:5555/CRM2016/XRMServices/2011/Organization.svc"); 
-            var cred = new ClientCredentials
-            {
-                Windows = { ClientCredential = new NetworkCredential("Administrator", "Pass@word99") }
-            };
-            OrganizationServiceProxy _serviceproxy = new
-            OrganizationServiceProxy(organizationUri, null, cred,
-            null);
-            IOrganizationService _service = (IOrganizationService)_serviceproxy;
-            return _service;
-        }
-
     }
 }
+
