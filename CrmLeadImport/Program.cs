@@ -23,7 +23,7 @@ namespace LeadImport
     {
         static void Main(string[] args)
         {
-            var pathTest = @"C:\Users\TSIV\Documents\Visual Studio 2017\Projects\sample_Dynamic_CRM\CrmLeadImport\leadsExcel\Leads.csv";
+            var pathTest = @"..\..\leadsExcel\Leads.csv";
 
             if (File.Exists(pathTest))
             {
