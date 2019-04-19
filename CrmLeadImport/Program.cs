@@ -30,7 +30,6 @@ namespace LeadImport
             if (File.Exists(pathTest))
             {
 
-
                 var credentials = new ClientCredentials
                 {
                     Windows = { ClientCredential = new NetworkCredential("Administrator", "Pass@word99") }
@@ -40,15 +39,13 @@ namespace LeadImport
                 
                 FileStream path = new FileStream(pathTest, FileMode.Open, FileAccess.Read);
                 List<Export> test = Export.ReadFile(path);
-                
 
                 CrmServiceWrapper a = new CrmServiceWrapper(serviceUri, credentials);
-                List<Guid> rGuid = a.ImportLeads(test);
-                foreach (Guid Rguid in rGuid)
+                List<Guid> rGuids = a.ImportLeads(test);
+                foreach (Guid Rguid in rGuids)
                 {
                     Console.WriteLine(Rguid);
                 }
-                Console.WriteLine(rGuid.Count);
                 Console.Read();
             }
             else

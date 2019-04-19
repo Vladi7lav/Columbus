@@ -35,18 +35,20 @@ namespace CrmLeadImport.leadsExcel
                 List<Export> res = new List<Export>();
                 using (StreamReader sr = new StreamReader(path))
                 {
-                    if (i != 0)
-                    {
+                    
                         string line;
                         while ((line = sr.ReadLine()) != null)
+                        {
+                        if (i != 0)
                         {
                             Export p = new Export();
                             p.piece(line);
                             res.Add(p);
                         }
+                        else
+                            i++;
                     }
-                    else
-                        i++;
+                    
                 }
                 return res;
             }
