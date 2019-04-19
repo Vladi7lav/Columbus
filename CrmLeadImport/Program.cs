@@ -38,12 +38,16 @@ namespace LeadImport
 
                 Uri serviceUri = new Uri("http://crm-train.columbus.ru:5555/CRM2016/XRMServices/2011/Organization.svc");
                 
-                 FileStream path = new FileStream(pathTest, FileMode.Open, FileAccess.Read);
-                 List<Export> test = Export.ReadFile(path);
+                FileStream path = new FileStream(pathTest, FileMode.Open, FileAccess.Read);
+                List<Export> test = Export.ReadFile(path);
                 
 
                 CrmServiceWrapper a = new CrmServiceWrapper(serviceUri, credentials);
                 List<Guid> rGuid = a.ImportLeads(test);
+                foreach (Guid Rguid in rGuid)
+                {
+                    Console.WriteLine(Rguid);
+                }
                 Console.WriteLine(rGuid.Count);
                 Console.Read();
             }

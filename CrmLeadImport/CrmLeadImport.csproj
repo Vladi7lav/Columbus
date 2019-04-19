@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MultipleThread.cs" />
     <Compile Include="CrmServiceWrapper.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="leadsExcel\Export.cs" />
