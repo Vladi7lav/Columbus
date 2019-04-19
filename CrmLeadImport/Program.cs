@@ -38,7 +38,7 @@ namespace LeadImport
                 List<Export> test = Export.ReadFile(path);
 
                 CrmServiceWrapper a = new CrmServiceWrapper(serviceUri, credentials);
-                List<Guid> rGuids = a.ImportLeads(test);
+                List<Guid> rGuids = a.ImportLeadsThreads(test);
                 foreach (Guid Rguid in rGuids)
                 {
                     Console.WriteLine(Rguid);
