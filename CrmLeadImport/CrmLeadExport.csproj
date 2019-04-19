@@ -61,7 +61,6 @@
   <ItemGroup>
     <Compile Include="MultipleThread.cs" />
     <Compile Include="CrmServiceWrapper.cs" />
-    <Compile Include="Service.cs" />
     <Compile Include="leadsExcel\Export.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

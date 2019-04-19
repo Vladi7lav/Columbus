@@ -21,15 +21,12 @@ namespace LeadImport
 {
     class Program
     {
-
-
         static void Main(string[] args)
         {
             var pathTest = @"C:\Users\TSIV\Documents\Visual Studio 2017\Projects\sample_Dynamic_CRM\CrmLeadImport\leadsExcel\Leads.csv";
 
             if (File.Exists(pathTest))
             {
-
                 var credentials = new ClientCredentials
                 {
                     Windows = { ClientCredential = new NetworkCredential("Administrator", "Pass@word99") }
