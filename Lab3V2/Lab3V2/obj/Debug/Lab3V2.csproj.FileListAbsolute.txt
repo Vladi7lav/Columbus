@@ -1,0 +1,13 @@
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\obj\Debug\Lab3V2.csprojAssemblyReference.cache
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\obj\Debug\Lab3V2.csproj.CoreCompileInputs.cache
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\bin\Debug\Lab3V2.exe.config
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\bin\Debug\Lab3V2.exe
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\bin\Debug\Lab3V2.pdb
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\bin\Debug\Microsoft.IdentityModel.dll
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\obj\Debug\Lab3V2.csproj.CopyComplete
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\obj\Debug\Lab3V2.exe
+C:\Users\TSIV\source\repos\Lab3V2\Lab3V2\obj\Debug\Lab3V2.pdb
