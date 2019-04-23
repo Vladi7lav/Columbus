@@ -5,3 +5,13 @@
 /.vs/CrmLeadImport/v15
 /CrmLeadImport/bin/Debug
 /CrmLeadImport/obj/Debug
+/CrmLeadImport/test.bat
+
+/Lab3V2/.vs/CrmLeadImport/v15
+/Lab3V2/Lab3V2/bin/Debug
+/Lab3V2/Lab3V2/obj/Debug
+/Lab3V2/Lab3V2/ConnectSQL.cs
+
+/CrmLeadImport/Context.cs
+/Context.cs
+/CrmLeadImport/Examples.cs
