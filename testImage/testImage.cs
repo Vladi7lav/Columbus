@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 
 namespace testImage
 {
-    //при обновлении поля мобильного телефона устанавливает в поле AutoNumber 10, если поле пустое, устанавливает 100
     public class TestImage : IPlugin
     {
         public void Execute(IServiceProvider serviceProvider)
