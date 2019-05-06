@@ -1,0 +1,11 @@
+C:\Users\TSIV\source\repos\testImage\bin\Debug\testImage.dll
+C:\Users\TSIV\source\repos\testImage\bin\Debug\testImage.pdb
+C:\Users\TSIV\source\repos\testImage\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\TSIV\source\repos\testImage\bin\Debug\Microsoft.IdentityModel.dll
+C:\Users\TSIV\source\repos\testImage\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\TSIV\source\repos\testImage\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\TSIV\source\repos\testImage\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\TSIV\source\repos\testImage\obj\Debug\testImage.csproj.CoreCompileInputs.cache
+C:\Users\TSIV\source\repos\testImage\obj\Debug\testImage.csproj.CopyComplete
+C:\Users\TSIV\source\repos\testImage\obj\Debug\testImage.dll
+C:\Users\TSIV\source\repos\testImage\obj\Debug\testImage.pdb
