@@ -36,6 +36,7 @@ namespace CrmLeadImport.Lab1
                     lead.Attributes["companyname"] = r.CompanyName;
                     lead.Attributes["numberofemployees"] = Convert.ToInt32(r.NumberOfEmployees);
                     lead.Attributes["revenue"] = Convert.ToDecimal(r.Revenue);
+                    //lead.Contains("revenue"); Проверка на существование
                     rGuid.Add(connect.Create(lead));
                 }
             }
